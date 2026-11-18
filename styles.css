@@ -319,5 +319,13 @@ body::before { content: ""; position: fixed; inset: 0 0 auto; height: env(safe-a
 .pilot .inv-form .form-error { color: #c0392b; font-size: 1rem; max-width: none; }
 @media (min-width: 640px) and (max-width: 1099px) { .pilot .inv-form { grid-template-columns: 1fr 1fr; } }
 #contact { border-top: 1px solid var(--rule); }
+/* Spam trap field: off screen for people, still in the form for bots. */
+.hp { position: absolute; left: -9999px; width: 1px; height: 1px; opacity: 0; }
+.inv-form { position: relative; }
+.form-actions .btn:disabled { opacity: .7; cursor: progress; }
+.thanks { min-height: 60vh; display: grid; align-content: center; }
+.thanks h1 { font-size: var(--step-3, 2.4rem); margin: 8px 0 12px; }
+.thanks p:not(.eyebrow) { color: var(--ink-2); max-width: 46ch; font-size: var(--step-1); }
+.thanks .btn { margin-top: 20px; justify-self: start; }
 .legal { margin-top: 18px; font-size: 0.85rem; color: var(--ink-2); }
 

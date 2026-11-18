@@ -69,15 +69,19 @@
       <div class="section-head">
         <p class="eyebrow">Investor inquiry</p>
         <h2>Tell us a little about you.</h2>
-        <p>Fill this in and your email app will open with the message ready. Nothing is sent until you press send there.</p>
+        <p>Send this and it comes straight to our team. We'll reply by email to set up a time to talk.</p>
       </div>
-      <form class="inv-form jf-form" id="inv-form" data-to="hello@jobfile.ai" data-tag="Investor" data-subject="Investor inquiry" novalidate>
-        <div class="field"><label for="f-name">Name <span aria-hidden="true">*</span></label><input id="f-name" name="name" autocomplete="name" required></div>
-        <div class="field"><label for="f-firm">Firm or company</label><input id="f-firm" name="firm" autocomplete="organization"></div>
+      <form class="inv-form jf-form" id="inv-form" action="https://formsubmit.co/hello@jobfile.ai" method="POST" data-to="hello@jobfile.ai" data-tag="Investor" data-subject="Investor inquiry">
+        <input type="hidden" name="_subject" value="[Investor] Investor inquiry from jobfile.ai">
+        <input type="hidden" name="_template" value="table">
+        <input type="hidden" name="_next" value="https://jobfile.ai/thanks/">
+        <input type="text" name="_honey" class="hp" tabindex="-1" autocomplete="off" aria-hidden="true">
+        <div class="field"><label for="f-name">Name <span aria-hidden="true">*</span></label><input id="f-name" name="Name" autocomplete="name" required></div>
+        <div class="field"><label for="f-firm">Firm or company</label><input id="f-firm" name="Firm" autocomplete="organization"></div>
         <div class="field"><label for="f-email">Email <span aria-hidden="true">*</span></label><input id="f-email" name="email" type="email" autocomplete="email" required></div>
-        <div class="field"><label for="f-phone">Phone</label><input id="f-phone" name="phone" type="tel" autocomplete="tel"></div>
+        <div class="field"><label for="f-phone">Phone</label><input id="f-phone" name="Phone" type="tel" autocomplete="tel"></div>
         <div class="field field-wide"><label for="f-size">Typical check size <span class="opt">(optional)</span></label>
-          <select id="f-size" name="size">
+          <select id="f-size" name="Typical check size">
             <option value="">Prefer not to say</option>
             <option>Under $25K</option>
             <option>$25K to $100K</option>
@@ -85,9 +89,9 @@
             <option>$500K and up</option>
             <option>Strategic partner, not investing</option>
           </select></div>
-        <div class="field field-wide"><label for="f-msg">Message <span aria-hidden="true">*</span></label><textarea id="f-msg" name="message" rows="5" required placeholder="What draws you to Jobfile.ai, and how you'd like to talk"></textarea></div>
+        <div class="field field-wide"><label for="f-msg">Message <span aria-hidden="true">*</span></label><textarea id="f-msg" name="Message" rows="5" required placeholder="What draws you to Jobfile.ai, and how you'd like to talk"></textarea></div>
         <p class="form-error" role="alert" hidden>Please add your name, a valid email and a short message.</p>
-        <div class="field-wide form-actions"><button class="btn btn-primary" type="submit">Open my email to send</button><span class="form-alt">Or email <a href="mailto:hello@jobfile.ai?subject=%5BInvestor%5D%20Investor%20inquiry">hello@jobfile.ai</a></span></div>
+        <div class="field-wide form-actions"><button class="btn btn-primary" type="submit">Send</button><span class="form-alt">Or email <a href="mailto:hello@jobfile.ai?subject=%5BInvestor%5D%20Investor%20inquiry">hello@jobfile.ai</a></span></div>
       </form>
       <p class="legal">This page is for introductions only. It is not an offer to sell, or a solicitation of an offer to buy, any securities.</p>
     </div>

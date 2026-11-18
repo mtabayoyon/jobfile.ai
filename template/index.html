@@ -245,26 +245,29 @@
         <p class="eyebrow" style="color: inherit; opacity: .75">Early pilots</p>
         <h2>Run a pilot on your own jobs.</h2>
         <p>We're working with a small number of service companies to start. Tell us about your crews and the systems you use today, and we'll set up a pilot around a few real jobs.</p>
-        <p class="pilot-note">Fill this in and your email app opens with the message ready. Nothing is sent until you press send there.</p>
       </div>
-      <form class="inv-form jf-form pilot-form" id="pilot-form" data-to="hello@__DOMAIN__" data-tag="Pilot" data-subject="Pilot inquiry" novalidate>
-        <div class="field"><label for="p-name">Name <span aria-hidden="true">*</span></label><input id="p-name" name="name" autocomplete="name" required></div>
-        <div class="field"><label for="p-company">Company <span aria-hidden="true">*</span></label><input id="p-company" name="company" autocomplete="organization" required></div>
+      <form class="inv-form jf-form pilot-form" id="pilot-form" action="https://formsubmit.co/hello@__DOMAIN__" method="POST" data-to="hello@__DOMAIN__" data-tag="Pilot" data-subject="Pilot inquiry">
+        <input type="hidden" name="_subject" value="[Pilot] Pilot inquiry from jobfile.ai">
+        <input type="hidden" name="_template" value="table">
+        <input type="hidden" name="_next" value="https://jobfile.ai/thanks/">
+        <input type="text" name="_honey" class="hp" tabindex="-1" autocomplete="off" aria-hidden="true">
+        <div class="field"><label for="p-name">Name <span aria-hidden="true">*</span></label><input id="p-name" name="Name" autocomplete="name" required></div>
+        <div class="field"><label for="p-company">Company <span aria-hidden="true">*</span></label><input id="p-company" name="Company" autocomplete="organization" required></div>
         <div class="field"><label for="p-email">Email <span aria-hidden="true">*</span></label><input id="p-email" name="email" type="email" autocomplete="email" required></div>
-        <div class="field"><label for="p-phone">Phone</label><input id="p-phone" name="phone" type="tel" autocomplete="tel"></div>
-        <div class="field"><label for="p-trade">Trade and service area</label><input id="p-trade" name="trade" placeholder="e.g. Water restoration, East Bay"></div>
+        <div class="field"><label for="p-phone">Phone</label><input id="p-phone" name="Phone" type="tel" autocomplete="tel"></div>
+        <div class="field"><label for="p-trade">Trade and service area</label><input id="p-trade" name="Trade and service area" placeholder="e.g. Water restoration, East Bay"></div>
         <div class="field"><label for="p-crews">Techs or crews</label>
-          <select id="p-crews" name="crews">
+          <select id="p-crews" name="Techs or crews">
             <option value="">Choose one</option>
             <option>1 to 5</option>
             <option>6 to 15</option>
             <option>16 to 50</option>
             <option>More than 50</option>
           </select></div>
-        <div class="field field-wide"><label for="p-software">Software you use today</label><input id="p-software" name="software" placeholder="Jobs, estimates, accounting"></div>
-        <div class="field field-wide"><label for="p-msg">What would you like to try? <span aria-hidden="true">*</span></label><textarea id="p-msg" name="message" rows="4" required></textarea></div>
+        <div class="field field-wide"><label for="p-software">Software you use today</label><input id="p-software" name="Software used" placeholder="Jobs, estimates, accounting"></div>
+        <div class="field field-wide"><label for="p-msg">What would you like to try? <span aria-hidden="true">*</span></label><textarea id="p-msg" name="Message" rows="4" required></textarea></div>
         <p class="form-error" role="alert" hidden>Please add your name, company, a valid email and a short message.</p>
-        <div class="field-wide form-actions"><button class="btn btn-primary" type="submit">Open my email to send</button><span class="form-alt">Or email <a href="mailto:hello@__DOMAIN__?subject=%5BPilot%5D%20Pilot%20inquiry">hello@__DOMAIN__</a></span></div>
+        <div class="field-wide form-actions"><button class="btn btn-primary" type="submit">Send</button><span class="form-alt">Or email <a href="mailto:hello@__DOMAIN__?subject=%5BPilot%5D%20Pilot%20inquiry">hello@__DOMAIN__</a></span></div>
       </form>
     </div>
   </section>
@@ -284,23 +287,27 @@
       <div class="section-head">
         <p class="eyebrow">Contact</p>
         <h2>Questions, partnerships or press.</h2>
-        <p>Send us a note and we'll get back to you. Your email app opens with the message ready, and nothing is sent until you press send there.</p>
+        <p>Send us a note and it comes straight to our team. We'll get back to you by email.</p>
       </div>
-      <form class="inv-form jf-form" id="contact-form" data-to="hello@__DOMAIN__" data-tag="General" data-subject="Message" novalidate>
-        <div class="field"><label for="c-name">Name <span aria-hidden="true">*</span></label><input id="c-name" name="name" autocomplete="name" required></div>
-        <div class="field"><label for="c-company">Company</label><input id="c-company" name="company" autocomplete="organization"></div>
+      <form class="inv-form jf-form" id="contact-form" action="https://formsubmit.co/hello@__DOMAIN__" method="POST" data-to="hello@__DOMAIN__" data-tag="General" data-subject="Message">
+        <input type="hidden" name="_subject" value="[General] Message from jobfile.ai">
+        <input type="hidden" name="_template" value="table">
+        <input type="hidden" name="_next" value="https://jobfile.ai/thanks/">
+        <input type="text" name="_honey" class="hp" tabindex="-1" autocomplete="off" aria-hidden="true">
+        <div class="field"><label for="c-name">Name <span aria-hidden="true">*</span></label><input id="c-name" name="Name" autocomplete="name" required></div>
+        <div class="field"><label for="c-company">Company</label><input id="c-company" name="Company" autocomplete="organization"></div>
         <div class="field"><label for="c-email">Email <span aria-hidden="true">*</span></label><input id="c-email" name="email" type="email" autocomplete="email" required></div>
         <div class="field"><label for="c-topic">Topic</label>
-          <select id="c-topic" name="topic">
+          <select id="c-topic" name="Topic">
             <option>General question</option>
             <option>Partnership or integration</option>
             <option>Press</option>
             <option>Careers</option>
             <option>Something else</option>
           </select></div>
-        <div class="field field-wide"><label for="c-msg">Message <span aria-hidden="true">*</span></label><textarea id="c-msg" name="message" rows="5" required></textarea></div>
+        <div class="field field-wide"><label for="c-msg">Message <span aria-hidden="true">*</span></label><textarea id="c-msg" name="Message" rows="5" required></textarea></div>
         <p class="form-error" role="alert" hidden>Please add your name, a valid email and a short message.</p>
-        <div class="field-wide form-actions"><button class="btn btn-primary" type="submit">Open my email to send</button><span class="form-alt">Or email <a href="mailto:hello@__DOMAIN__">hello@__DOMAIN__</a></span></div>
+        <div class="field-wide form-actions"><button class="btn btn-primary" type="submit">Send</button><span class="form-alt">Or email <a href="mailto:hello@__DOMAIN__">hello@__DOMAIN__</a></span></div>
       </form>
     </div>
   </section>
