@@ -1,17 +1,20 @@
 /* Layout: one left-aligned column on a faint survey grid; the hero pairs the pitch with a live "field record" card. */
 :root {
-  --paper: #f3f5f2;
-  --paper-2: #e8ece7;
-  --ink: #13222f;
-  --ink-2: #4a5966;
-  --rule: #cfd6cf;
-  --flag: #d9541a;        /* survey flagging-tape orange */
+  --paper: #f5f7fb;
+  --paper-2: #e9eef7;
+  --ink: #111a33;         /* logo navy */
+  --ink-2: #4b5468;
+  --rule: #d3dae7;
+  --flag: #2563eb;        /* logo royal blue, the accent */
   --flag-ink: #ffffff;
-  --motion: #1f6fe0;      /* automation blue, from the logo */
+  --motion: #3b9cf0;      /* logo sky blue (swoosh) */
+  --logo-deep: #1d3a9c;
+  --logo-royal: #2759d6;
+  --logo-sky: #5bb0f4;
   --card: #ffffff;
   --ok: #2f7d4f;
   --warn: #a8660d;
-  --grid: rgba(19, 34, 47, 0.05);
+  --grid: rgba(17, 26, 51, 0.045);
   --font-display: "Archivo", "Helvetica Neue", Arial, sans-serif;
   --font-body: "IBM Plex Sans", "Segoe UI", Roboto, sans-serif;
   --font-mono: "IBM Plex Mono", ui-monospace, "SFMono-Regular", Menlo, monospace;
@@ -25,16 +28,18 @@
 }
 @media (prefers-color-scheme: dark) {
   :root:not([data-theme="light"]) {
-    --paper: #0f1923; --paper-2: #16222e; --ink: #e5ebee; --ink-2: #9eacb7;
-    --rule: #263544; --flag: #ff7a3d; --flag-ink: #1a0d05; --card: #15212c; --motion: #5aa2ff;
-    --ok: #5fc08a; --warn: #e3a54a; --grid: rgba(229, 235, 238, 0.04);
+    --paper: #0b1222; --paper-2: #131c31; --ink: #e6ebf5; --ink-2: #9ea9be;
+    --rule: #24304a; --flag: #5b8cff; --flag-ink: #08101f; --card: #111a2e; --motion: #6cc0ff;
+    --logo-deep: #3557c9; --logo-royal: #4a78f0; --logo-sky: #6cc0ff;
+    --ok: #5fc08a; --warn: #e3a54a; --grid: rgba(230, 235, 245, 0.04);
     color-scheme: dark;
   }
 }
 :root[data-theme="dark"] {
-  --paper: #0f1923; --paper-2: #16222e; --ink: #e5ebee; --ink-2: #9eacb7;
-  --rule: #263544; --flag: #ff7a3d; --flag-ink: #1a0d05; --card: #15212c; --motion: #5aa2ff;
-  --ok: #5fc08a; --warn: #e3a54a; --grid: rgba(229, 235, 238, 0.04);
+  --paper: #0b1222; --paper-2: #131c31; --ink: #e6ebf5; --ink-2: #9ea9be;
+  --rule: #24304a; --flag: #5b8cff; --flag-ink: #08101f; --card: #111a2e; --motion: #6cc0ff;
+  --logo-deep: #3557c9; --logo-royal: #4a78f0; --logo-sky: #6cc0ff;
+  --ok: #5fc08a; --warn: #e3a54a; --grid: rgba(230, 235, 245, 0.04);
   color-scheme: dark;
 }
 
@@ -76,9 +81,11 @@ h2 { font-size: var(--step-3); font-weight: 750; }
 h3 { font-size: var(--step-1); font-weight: 700; font-stretch: 105%; }
 p { margin: 0; }
 .lede { font-size: var(--step-1); color: var(--ink-2); max-width: 40ch; }
-.tagline { font-family: var(--font-display); font-weight: 800; font-stretch: 115%; font-size: var(--step-1); letter-spacing: 0.01em; color: var(--ink); }
-.tagline .t-automate { color: var(--motion); }
-.tagline .t-operate { color: var(--flag); }
+.tagline { font-family: var(--font-display); font-weight: 700; font-size: 0.95rem; letter-spacing: 0.14em; text-transform: uppercase; color: var(--ink-2); }
+.tagline .dot { color: var(--flag); margin: 0 0.25em; }
+.subline { display: flex; align-items: center; gap: 12px; font-family: var(--font-mono); font-size: 0.74rem; letter-spacing: 0.14em; text-transform: uppercase; color: var(--ink-2); margin-top: -6px; }
+.subline::before, .subline::after { content: ""; height: 1px; width: 28px; background: var(--rule); }
+.subline::before { display: none; }
 .eyebrow {
   font-family: var(--font-mono);
   font-size: 0.78rem;
@@ -97,12 +104,16 @@ p { margin: 0; }
   border-bottom: 1px solid var(--rule);
 }
 .site-header .wrap { display: flex; align-items: center; justify-content: space-between; gap: 16px; padding-block: 14px; }
-.brand { display: flex; align-items: center; gap: 10px; text-decoration: none; font-family: var(--font-display); font-weight: 800; font-stretch: 115%; font-size: 1.15rem; }
-.brand-mark { width: 30px; height: 30px; flex: none; overflow: visible; }
-.brand-mark path { fill: none; stroke-linecap: round; stroke-linejoin: round; }
-.m-folder { stroke: currentColor; stroke-width: 2.4; }
-.m-check { stroke: var(--flag); stroke-width: 2.8; }
-.m-motion { stroke: var(--motion); stroke-width: 2.2; }
+.brand { display: flex; align-items: center; gap: 8px; text-decoration: none; font-family: var(--font-display); font-weight: 800; font-stretch: 100%; font-size: 1.35rem; }
+.brand-mark { width: 40px; height: 34px; flex: none; overflow: visible; }
+.lg-back { fill: var(--logo-deep); }
+.lg-sheet { fill: var(--logo-sky); }
+.lg-front { fill: var(--logo-royal); }
+.lg-check { fill: none; stroke: #fff; stroke-width: 3; stroke-linecap: round; stroke-linejoin: round; }
+.lg-swoosh { fill: none; stroke: var(--logo-sky); stroke-width: 2.4; stroke-linecap: round; }
+.lg-spark { fill: var(--logo-royal); }
+.wordmark { color: var(--ink); letter-spacing: -0.01em; }
+.wm-ai { color: var(--flag); }
 .nav { display: flex; gap: 22px; align-items: center; font-size: 0.95rem; }
 .nav a { text-decoration: none; color: var(--ink-2); }
 .nav a:hover { color: var(--ink); }
@@ -230,7 +241,7 @@ section { padding-block: clamp(56px, 8vw, 96px); }
 .site-footer { padding-block: 28px; border-top: 1px solid var(--rule); font-size: 0.88rem; color: var(--ink-2); }
 .site-footer .wrap { display: flex; flex-wrap: wrap; gap: 12px 24px; justify-content: space-between; align-items: center; }
 .foot-brand { display: inline-flex; align-items: center; gap: 10px; color: var(--ink-2); }
-.foot-mark { width: 22px; height: 22px; color: var(--ink); }
+.foot-mark { width: 28px; height: 24px; }
 
 @media (prefers-reduced-motion: reduce) { * { transition: none !important; } }
 body::before { content: ""; position: fixed; inset: 0 0 auto; height: env(safe-area-inset-top, 0px); z-index: 30; background: var(--paper); }

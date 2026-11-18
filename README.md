@@ -1,14 +1,15 @@
 # Field-data AI company site
 
-Static launch site (no build step) for GitHub Pages. Name: **JobFile AI** at **jobfile.ai** (jobfileai.com was also open on Nov 18, 2026).
+Static launch site (no build step) for GitHub Pages. Name: **Jobfile.ai** at **jobfile.ai** (jobfileai.com was also open on Nov 18, 2026).
 
-Brand: tagline **Capture. Automate. Operate.** Logo is a job folder (job records), an orange check (completed work) and blue motion lines (automation), drawn inline in `index.html` and in `favicon.svg`. Positioned as a practical operations platform for contractors and field-service companies, with AI underneath. Swap in a final logo file when one is ready.
+Brand: **Jobfile.ai**, tagline **Capture • Automate • Operate**, supporting line **AI workflow for service companies**. Michael's full logo lockup is `brand/jobfile-logo.jpeg` (also the social share image). The site uses an SVG redraw of its folder, check, swoosh and sparkle mark (inline in `index.html`, and `favicon.svg`) so it works on light and dark backgrounds. Colors come from the logo: navy `#111a33`, royal blue `#2563eb`, sky blue `#3b9cf0`.
 
 ## Files
 
 - `index.html` – the site, built from `template/index.html` with the name and domain filled in
 - `styles.css` – all styles (light and dark)
-- `favicon.svg` – folder, check and motion-lines mark
+- `favicon.svg` – the logo mark
+- `brand/jobfile-logo.jpeg` – full logo lockup
 - `CNAME` – the custom domain GitHub Pages serves
 - `.nojekyll` – tells GitHub Pages to serve files as-is
 - `template/index.html` – same page with `__BRAND__` and `__DOMAIN__` placeholders
