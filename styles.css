@@ -281,4 +281,9 @@ body::before { content: ""; position: fixed; inset: 0 0 auto; height: env(safe-a
 .said-list dt { font-style: italic; color: #fff; }
 .said-list dd { margin: 0; font-family: var(--font-mono); font-size: 0.82rem; color: #8fb4ff; }
 .wear-fine { margin-top: 22px; font-size: 0.88rem; color: #8d99b1; }
-
+.storyboards { display: grid; gap: 16px; max-width: 920px; margin-bottom: 32px; }
+@media (min-width: 720px) { .storyboards { grid-template-columns: 1fr 1fr; } }
+.story { margin: 0; border: 1px solid #263456; border-radius: 12px; overflow: hidden; background: #131f3d; min-width: 0; }
+.story-vid { display: block; width: 100%; height: auto; aspect-ratio: 1 / 1; object-fit: cover; background: #0b1222; }
+.story figcaption { padding: 14px 16px; font-size: 0.95rem; color: #c3cde0; }
+.story figcaption strong { color: #fff; }

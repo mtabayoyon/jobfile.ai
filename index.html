@@ -103,6 +103,24 @@
         <p>Jobfile.ai is built around wearable cameras. Techs keep both hands on the work while the camera records what they see and the mic picks up what they say. No phone in hand, and no form to fill out at the end of the day.</p>
       </div>
 
+      <p class="label">Concept storyboards</p>
+      <div class="storyboards">
+        <figure class="story">
+          <video class="story-vid" autoplay muted loop playsinline preload="metadata" poster="media/storyboard-restoration-poster.webp" width="438" height="438" aria-label="A restoration tech with a chest-mounted camera walks through a gutted basement. On screen, the camera flags the HVAC unit and electrical panel, logs moisture, wall and surface condition, measures the room at 28 feet 6 inches by 12 feet 4 inches, and syncs it all to Jobfile.ai.">
+            <source src="media/storyboard-restoration.webm" type="video/webm">
+            <source src="media/storyboard-restoration.mp4" type="video/mp4">
+          </video>
+          <figcaption><strong>Restoration walk-through.</strong> The chest cam flags the HVAC unit and electrical panel, logs moisture and wall condition, measures the room and syncs it to the job.</figcaption>
+        </figure>
+        <figure class="story">
+          <video class="story-vid" autoplay muted loop playsinline preload="metadata" poster="media/storyboard-construction-poster.webp" width="434" height="424" aria-label="A construction worker in a hard hat and hi-vis vest wears a chest camera on a building site. The camera records the walk, AI picks out drywall and a scissor lift, notes site conditions, measures a 16 foot 8 inch by 28 foot 4 inch room, and uploads photos, equipment, measurements and conditions.">
+            <source src="media/storyboard-construction.webm" type="video/webm">
+            <source src="media/storyboard-construction.mp4" type="video/mp4">
+          </video>
+          <figcaption><strong>Construction site.</strong> The camera records the walk, AI picks out materials and equipment, measures the room and uploads the job data.</figcaption>
+        </figure>
+      </div>
+
       <div class="wear-flow">
         <div class="wear-col">
           <p class="label">On the tech</p>
@@ -248,6 +266,11 @@
     <span>hello@jobfile.ai</span>
   </div>
 </footer>
+<script>
+  if (window.matchMedia && matchMedia("(prefers-reduced-motion: reduce)").matches) {
+    document.querySelectorAll("video[autoplay]").forEach(function (v) { v.removeAttribute("autoplay"); v.pause(); v.controls = true; });
+  }
+</script>
 <!--BODY-END-->
 </body>
 </html>
