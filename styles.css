@@ -230,7 +230,7 @@ section { padding-block: clamp(56px, 8vw, 96px); }
 
 .pilot { background: var(--ink); color: var(--paper); }
 .pilot .wrap { display: grid; gap: 28px; }
-@media (min-width: 900px) { .pilot .wrap { grid-template-columns: 1.2fr 1fr; align-items: end; } }
+@media (min-width: 900px) { .pilot .wrap { grid-template-columns: 1fr 1.2fr; align-items: start; } }
 .pilot h2 { color: var(--paper); }
 .pilot p { color: color-mix(in srgb, var(--paper) 78%, var(--ink)); font-size: var(--step-1); max-width: 40ch; }
 .pilot-box { display: grid; gap: 14px; padding: 22px; border: 1px solid color-mix(in srgb, var(--paper) 25%, var(--ink)); border-radius: 10px; min-width: 0; }
@@ -313,5 +313,11 @@ body::before { content: ""; position: fixed; inset: 0 0 auto; height: env(safe-a
 .form-actions .btn { cursor: pointer; font: inherit; font-weight: 600; }
 .form-alt { font-size: 0.92rem; color: var(--ink-2); }
 .form-error { grid-column: 1 / -1; margin: 0; color: #c0392b; font-weight: 600; }
+/* Pilot form sits as a light card on the dark pilot band. */
+.pilot .pilot-note { font-size: 1rem; margin-top: 12px; }
+.pilot .inv-form { color: var(--ink); }
+.pilot .inv-form .form-error { color: #c0392b; font-size: 1rem; max-width: none; }
+@media (min-width: 640px) and (max-width: 1099px) { .pilot .inv-form { grid-template-columns: 1fr 1fr; } }
+#contact { border-top: 1px solid var(--rule); }
 .legal { margin-top: 18px; font-size: 0.85rem; color: var(--ink-2); }
 

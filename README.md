@@ -10,7 +10,8 @@ Brand: **Jobfile.ai**, tagline **Capture • Automate • Operate**, supporting 
 - `styles.css` – all styles (light and dark)
 - `favicon.svg` – the logo mark
 - `brand/jobfile-logo.jpeg` – full logo lockup
-- `investors/index.html` – investor inquiry page; the form opens the visitor's email app with the message filled in (no form service). **The inbox is a placeholder: `investors@jobfile.ai` in the form's `data-to` and the fallback link.** Change both once the address is confirmed.
+- `investors/index.html` – investor inquiry page.
+- Contact forms: the pilot form and general contact form on the home page and the investor form all use `contact.js`. Each opens the visitor's email app with the message filled in, addressed to hello@jobfile.ai (a Google Workspace group), with a subject tag of [Pilot], [General] or [Investor] for sorting. No form service is used, so nothing sends until the visitor presses send in their mail app.
 - `media/` – wearable camera storyboards (looping videos and poster images)
 - `CNAME` – the custom domain GitHub Pages serves
 - `.nojekyll` – tells GitHub Pages to serve files as-is
