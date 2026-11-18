@@ -2,11 +2,13 @@
 
 Static launch site (no build step) for GitHub Pages. Name: **JobFile AI** at **jobfile.ai** (jobfileai.com was also open on Nov 18, 2026).
 
+Brand: tagline **Capture. Automate. Operate.** Logo is a job folder (job records), an orange check (completed work) and blue motion lines (automation), drawn inline in `index.html` and in `favicon.svg`. Positioned as a practical operations platform for contractors and field-service companies, with AI underneath. Swap in a final logo file when one is ready.
+
 ## Files
 
 - `index.html` – the site, built from `template/index.html` with the name and domain filled in
 - `styles.css` – all styles (light and dark)
-- `favicon.svg` – job-file mark
+- `favicon.svg` – folder, check and motion-lines mark
 - `CNAME` – the custom domain GitHub Pages serves
 - `.nojekyll` – tells GitHub Pages to serve files as-is
 - `template/index.html` – same page with `__BRAND__` and `__DOMAIN__` placeholders
@@ -26,7 +28,7 @@ echo "newdomain.com" > CNAME
 ## Publish on GitHub Pages
 
 1. Register the domain.
-2. Create a public repo under `mtabayoyon` (here `jobfile.ai`) and push the files in this folder, minus `template/` if you like.
+2. Create a public repo under `mtabayoyon` (for example `jobfile-ai-site`) and push the files in this folder, minus `template/` if you like.
 3. In the repo: Settings → Pages → Source: Deploy from a branch → `main` / root. Save.
 4. Settings → Pages → Custom domain: enter the domain. Tick **Enforce HTTPS** once the certificate is issued (can take up to an hour).
 
